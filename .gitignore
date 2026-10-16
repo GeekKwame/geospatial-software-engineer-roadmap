@@ -1,0 +1,21 @@
+# Downloaded datasets: too large for git, and many have their own licences.
+# Document where to download them in each phase's README instead.
+phase-*/data/
+
+# QGIS temporary and backup files
+*.qgz~
+*.qgs~
+*.qgd
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+
+# Environment and secrets
+.env
+
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
