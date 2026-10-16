@@ -1,4 +1,4 @@
-# Phase 9 plan: Capstone and career (Weeks 24–26)
+# Phase 9 plan: Capstone and career
 
 **Goal:** Combine everything into one polished, documented system, "Asase Trace" v1.0, and use it to show what you can do.
 
@@ -10,7 +10,7 @@ Field (QField / Kobo)  →  Ingest + plotcheck validation  →  PostGIS (plots, 
         →  Docker / Terraform / GitHub Actions on AWS
 ```
 
-## Week 24: Integrate and polish
+## Part 1: Integrate and polish
 
 - [ ] Run the full pipeline end to end with synthetic data: field form → ingest → validation → risk check → map → export
 - [ ] Fix the rough edges you find
@@ -21,7 +21,7 @@ Field (QField / Kobo)  →  Ingest + plotcheck validation  →  PostGIS (plots, 
   - [ ] Limitations (pixel size, clouds, shaded cocoa, GPS accuracy under canopy)
   - [ ] Screenshots or a GIF
 
-## Week 25: Show it
+## Part 2: Show it
 
 - [ ] Record a 3-minute demo video
 - [ ] Write a blog post: *"Building an EUDR plot-compliance pipeline for Ghana cocoa with open-source GIS"*
@@ -29,7 +29,7 @@ Field (QField / Kobo)  →  Ingest + plotcheck validation  →  PostGIS (plots, 
   - [ ] Add a **"Geospatial"** group to `CAPABILITY_GROUPS` in `my-portfolio/src/components/Skills.jsx`
   - [ ] Add Asase Trace to `src/data/projects.js`
 
-## Week 26: Share it
+## Part 3: Share it
 
 - [ ] Give a **lunch-and-learn at Afarinick** on what you built and how it could apply internally
 - [ ] Go through "Concepts you must be able to explain without notes" in `ROADMAP.md`, and explain each one out loud in 2 minutes

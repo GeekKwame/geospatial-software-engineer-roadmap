@@ -9,7 +9,7 @@
 ## How to use this roadmap
 
 1. **Go through the phases in order.** Each phase builds on the one before it. Don't skip ahead unless you can already deliver that phase's **"Prove it" project**.
-2. **Pace:** about **8–10 hours per week**, which fits around a full-time job. At that pace the roadmap takes about **26 weeks (6 months)**. If a phase takes longer, that's fine; the deliverable matters more than the calendar.
+2. **Pace is yours.** A few focused hours a week around a full-time job is enough. There are **10 phases** — finish each **"Prove it" project** before moving on. Faster or slower is still correct; the deliverable matters more than the calendar.
 3. **For each phase:**
   - Pick **one main resource** (marked ⭐) and work through it. Use the other resources only when you're stuck.
   - Watch the video only when the written material isn't clicking.
@@ -77,28 +77,28 @@ Read these first (about 1 hour):
 ## Roadmap at a glance
 
 
-| Phase | Weeks   | Topic                              | Prove-it project                                      |
-| ----- | ------- | ---------------------------------- | ----------------------------------------------------- |
-| 0     | 0       | Setup and orientation              | Working local GIS toolbox                             |
-| 1     | 1–3     | GIS and geodesy foundations (QGIS) | Ghana cocoa-region map plus a CRS cheat sheet         |
-| 2     | 4–6     | Geospatial Python                  | `plotcheck`: an EUDR plot-validator command-line tool |
-| 3     | 7–9     | Advanced PostGIS                   | Overlap and forest-reserve conflict queries           |
-| 4     | 10–13   | Remote sensing and raster data     | Deforestation-since-2020 checker                      |
-| 5     | 14–15   | Field data collection              | Farm/nursery survey form → PostGIS pipeline           |
-| 6     | 16–18   | Geospatial backends and standards  | Vector tiles plus an OGC API on Asase GIS             |
-| 7     | 19–20   | Modern web mapping                 | MapLibre plot editor and dashboard                    |
-| 8     | 21–23   | Production, scale and cloud-native | Deployed, monitored, background jobs, COGs on S3      |
-| 9     | 24–26   | Capstone and career                | "Asase Trace" v1.0 plus a write-up and talk           |
-| 🌐    | Ongoing | Community and open source          | OSM Ghana, FOSS4G, contributions                      |
+| Phase | Topic                              | Prove-it project                                      |
+| ----- | ---------------------------------- | ----------------------------------------------------- |
+| 0     | Setup and orientation              | Working local GIS toolbox                             |
+| 1     | GIS and geodesy foundations (QGIS) | Ghana cocoa-region map plus a CRS cheat sheet         |
+| 2     | Geospatial Python                  | `plotcheck`: an EUDR plot-validator command-line tool |
+| 3     | Advanced PostGIS                   | Overlap and forest-reserve conflict queries           |
+| 4     | Remote sensing and raster data     | Deforestation-since-2020 checker                      |
+| 5     | Field data collection              | Farm/nursery survey form → PostGIS pipeline           |
+| 6     | Geospatial backends and standards  | Vector tiles plus an OGC API on Asase GIS             |
+| 7     | Modern web mapping                 | MapLibre plot editor and dashboard                    |
+| 8     | Production, scale and cloud-native | Deployed, monitored, background jobs, COGs on S3      |
+| 9     | Capstone and career                | "Asase Trace" v1.0 plus a write-up and talk           |
+| 🌐    | Community and open source (ongoing)| OSM Ghana, FOSS4G, contributions                      |
 
 
 ---
 
 
 
-## Phase 0: Setup and orientation (Week 0, about 4 hours)
+## Phase 0: Setup and orientation
 
-**Goal:** Get every tool installed now, so later phases are spent learning rather than fixing installs.
+**Goal:** Get every tool installed now, so later phases are spent learning rather than fixing installs. This phase is a short setup afternoon, not a long course.
 
 - [x] Install **QGIS (LTR version)**: [qgis.org/download](https://www.qgis.org/download/)
 - [x] Create a Python geospatial environment with conda-forge or `uv` that includes `geopandas shapely pyproj pyogrio rasterio rioxarray xarray pystac-client jupyterlab folium leafmap`
@@ -118,7 +118,7 @@ Read these first (about 1 hour):
 
 
 
-## Phase 1: GIS and geodesy foundations (Weeks 1–3)
+## Phase 1: GIS and geodesy foundations
 
 **Goal:** Think like a GIS analyst. Most "GIS bugs" in software are really misunderstood concepts: the wrong CRS, swapped lat/lon, invalid geometry, or area measured in degrees.
 
@@ -173,7 +173,7 @@ Read these first (about 1 hour):
 
 
 
-## Phase 2: Geospatial Python (Weeks 4–6)
+## Phase 2: Geospatial Python
 
 **Goal:** Do everything you did in QGIS, but in reproducible, testable Python.
 
@@ -218,7 +218,7 @@ Write pytest tests with hand-crafted bad geometries. This will be directly usefu
 
 
 
-## Phase 3: Advanced PostGIS (Weeks 7–9)
+## Phase 3: Advanced PostGIS
 
 **Goal:** Move from "PostGIS stores my polygons" to "I can design, query, index and tune a spatial database of a million farm plots".
 
@@ -263,7 +263,7 @@ Write pytest tests with hand-crafted bad geometries. This will be directly usefu
 
 
 
-## Phase 4: Remote sensing and raster data (Weeks 10–13)
+## Phase 4: Remote sensing and raster data
 
 **Goal:** Answer the question at the centre of the EUDR: **"Has this plot lost forest since 31 December 2020?"** You'll also be able to monitor rehabilitated cocoa farms and nursery out-planting with satellite data.
 
@@ -317,7 +317,7 @@ Be clear about the limits: 10–30 m pixels, cloud cover, and the fact that coco
 
 
 
-## Phase 5: Field data collection (Weeks 14–15)
+## Phase 5: Field data collection
 
 **Goal:** Afarinick's data starts in the field, with officers walking farm boundaries and recording nurseries. Learn how that data is captured, so your backend can accept it cleanly.
 
@@ -353,7 +353,7 @@ Be clear about the limits: 10–30 m pixels, cloud cover, and the fact that coco
 
 
 
-## Phase 6: Geospatial backends and standards (Weeks 16–18)
+## Phase 6: Geospatial backends and standards
 
 **Goal:** Serve spatial data the way professional systems do: fast vector tiles, standard OGC APIs, and dynamic raster tiles.
 
@@ -396,7 +396,7 @@ Be clear about the limits: 10–30 m pixels, cloud cover, and the fact that coco
 
 
 
-## Phase 7: Modern web mapping (Weeks 19–20)
+## Phase 7: Modern web mapping
 
 **Goal:** Build map interfaces that field officers and managers actually want to use, and that can display 100k+ plots smoothly.
 
@@ -435,7 +435,7 @@ Be clear about the limits: 10–30 m pixels, cloud cover, and the fact that coco
 
 
 
-## Phase 8: Production, scale and cloud-native (Weeks 21–23)
+## Phase 8: Production, scale and cloud-native
 
 **Goal:** Use your DevOps and AWS strengths in a geospatial setting. This is where you can pull ahead of most GIS developers.
 
@@ -476,7 +476,7 @@ Be clear about the limits: 10–30 m pixels, cloud cover, and the fact that coco
 
 
 
-## Phase 9: Capstone and career (Weeks 24–26)
+## Phase 9: Capstone and career
 
 
 
@@ -543,13 +543,17 @@ Before calling yourself a geospatial engineer, explain each of these out loud in
 
 
 
-## Weekly routine
+## Suggested rhythm (optional)
+
+Fit this around your life. A sample pattern that works with a full-time job:
 
 ```
-Mon–Thu (~1.5 h/day): learn from the ⭐ resource → reproduce it in your own repo
-Sat (~3 h):           build the "Prove it" project
-Sun (15 min):         write notes/NN-phase.md → what I learned, one question, one limitation
+A few evenings:  learn from the ⭐ resource → reproduce it in your own repo
+One longer block: build the "Prove it" project
+15 minutes:       write notes/NN-phase.md → what I learned, one question, one limitation
 ```
+
+Skip days. Stack sessions. Take a break between phases. The only rule is: **don't start the next phase until this phase's project ships.**
 
 **Before moving to the next phase, ask yourself:**
 
@@ -580,4 +584,4 @@ Sun (15 min):         write notes/NN-phase.md → what I learned, one question, 
 
 ---
 
-*Detailed week-by-week plans for each phase are in* `phase-N/PLAN.md`*. This roadmap supersedes the earlier generic 12-week plan. You've already covered most of that plan's weeks 5–10 through Asase GIS, so this version starts from that level and goes further.*
+*Detailed plans for each phase are in* `phase-N/PLAN.md`*. This roadmap supersedes the earlier generic 12-week plan. You've already covered most of that plan's weeks 5–10 through Asase GIS, so this version starts from that level and goes further.*

@@ -1,10 +1,12 @@
 # Geospatial Software Engineer Roadmap
 
-A 26-week, project-based path from **backend engineer with one GIS project** to **geospatial software engineer** who can own farm, forest and nursery mapping systems.
+A **project-based path** from *backend engineer with one GIS project* to *geospatial software engineer* who can own farm, forest and nursery mapping systems.
+
+**Ten phases. One small prove-it project each.** Go at your own pace — evenings and weekends around a job is fine. Ship the project, then move on. There is no deadline.
 
 Built and followed in public by [Blessing Edmund Kwame Dogbe](https://github.com/GeekKwame) (Accra, Ghana), Software Engineer at Afarinick Company Limited. When the journey is finished, this repo is meant to be a **guide for other developers** who want the same path.
 
-> **Not a tutorial dump.** Each phase has a week-by-week plan, a clear "prove it" project, and notes. You learn by shipping.
+> **Not a tutorial dump.** Each phase has a clear plan, a prove-it project, and space for notes. You learn by shipping.
 
 ## Who this is for
 
@@ -15,35 +17,35 @@ Built and followed in public by [Blessing Edmund Kwame Dogbe](https://github.com
 ## How to use this repo
 
 1. Read [`ROADMAP.md`](./ROADMAP.md) for the big picture, EUDR context and the full checklist.
-2. Open the phase you are on, for example [`phase-1/PLAN.md`](./phase-1/PLAN.md), and work week by week.
+2. Open the phase you are on, for example [`phase-1/PLAN.md`](./phase-1/PLAN.md), and work through its checklist.
 3. Keep personal notes in `notes/` (one file per phase).
 4. Tick checkboxes as you go (`- [ ]` → `- [x]`).
 5. Ship each "Prove it" project before you move on.
 
-**Pace:** about 8–10 hours per week (~26 weeks / 6 months). The deliverable matters more than the calendar.
+**Pace:** yours. A few focused hours a week is enough. Finish when the phase project works — not when a calendar says so.
 
-**Time split:** ~40% learning, ~50% building, ~10% notes.
+**Time split (suggested):** ~40% learning, ~50% building, ~10% notes.
 
 ## Roadmap at a glance
 
-| Phase | Weeks | Topic | Prove-it project |
-| ----- | ----- | ----- | ---------------- |
-| 0 | 0 | Setup and orientation | Working local GIS toolbox |
-| 1 | 1–3 | GIS and geodesy foundations (QGIS) | Ghana cocoa-region map + CRS cheat sheet |
-| 2 | 4–6 | Geospatial Python | `plotcheck`: EUDR plot-validator CLI |
-| 3 | 7–9 | Advanced PostGIS | Overlap and forest-reserve conflict queries |
-| 4 | 10–13 | Remote sensing and raster | Deforestation-since-2020 checker |
-| 5 | 14–15 | Field data collection | Farm/nursery survey → PostGIS pipeline |
-| 6 | 16–18 | Geospatial backends and standards | Vector tiles + OGC API on Asase GIS |
-| 7 | 19–20 | Modern web mapping | MapLibre plot editor and dashboard |
-| 8 | 21–23 | Production, scale and cloud-native | Deployed app, jobs, COGs on S3 |
-| 9 | 24–26 | Capstone and career | "Asase Trace" v1.0 + write-up |
+| Phase | Topic | Prove-it project |
+| ----- | ----- | ---------------- |
+| 0 | Setup and orientation | Working local GIS toolbox |
+| 1 | GIS and geodesy foundations (QGIS) | Ghana cocoa-region map + CRS cheat sheet |
+| 2 | Geospatial Python | `plotcheck`: EUDR plot-validator CLI |
+| 3 | Advanced PostGIS | Overlap and forest-reserve conflict queries |
+| 4 | Remote sensing and raster | Deforestation-since-2020 checker |
+| 5 | Field data collection | Farm/nursery survey → PostGIS pipeline |
+| 6 | Geospatial backends and standards | Vector tiles + OGC API on Asase GIS |
+| 7 | Modern web mapping | MapLibre plot editor and dashboard |
+| 8 | Production, scale and cloud-native | Deployed app, jobs, COGs on S3 |
+| 9 | Capstone and career | "Asase Trace" v1.0 + write-up |
 
 Detailed plans live in each phase folder:
 
 ```text
 phase-0/ … phase-9/
-  PLAN.md          ← week-by-week checklist for that phase
+  PLAN.md          ← checklist for that phase
 ```
 
 ## Repo layout

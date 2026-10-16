@@ -1,4 +1,4 @@
-# Phase 4 plan: Remote sensing and raster data (Weeks 10–13)
+# Phase 4 plan: Remote sensing and raster data
 
 **Goal:** Answer the question at the centre of the EUDR: **"Has this plot lost forest since 31 December 2020?"**
 
@@ -10,7 +10,7 @@
 
 **Prove-it project:** `forestcheck`, an EUDR deforestation checker.
 
-## Week 10: Raster basics and satellites
+## Part 1: Raster basics and satellites
 
 - [ ] Raster basics: bands, resolution, nodata, data types, the affine transform, CRS
 - [ ] Satellites:
@@ -21,7 +21,7 @@
 - [ ] Spectral indices: **NDVI** = (NIR − Red) / (NIR + Red), and NDMI
 - [ ] Cloud masking with the Sentinel-2 SCL band
 
-## Week 11: Earth Engine
+## Part 2: Earth Engine
 
 - [ ] Spatial Thoughts End-to-End GEE course, modules 1–3 ([Module 1 video](https://www.youtube.com/watch?v=daYhxVVIpJU))
 - [ ] In the Code Editor: filter Sentinel-2, mask clouds, make a median composite, compute NDVI (your Accra script is a start)
@@ -31,7 +31,7 @@
 - [ ] Zonal statistics: `reduceRegions` to summarise pixels inside each farm polygon
 - [ ] Python API: `earthengine authenticate`, `ee.Initialize(project=...)`, and `geemap` in Jupyter
 
-## Week 12: Open data in Python (no Google)
+## Part 3: Open data in Python (no Google)
 
 - [ ] **COG** (Cloud Optimized GeoTIFF) and **STAC** (catalogues of satellite images)
 - [ ] Search Sentinel-2 with `pystac-client` on [Earth Search](https://element84.com/earth-search/) or [Planetary Computer](https://planetarycomputer.microsoft.com/docs/quickstarts/reading-stac/)
@@ -40,7 +40,7 @@
 - [ ] **rioxarray:** `.rio.clip(...)`, `.rio.reproject(...)`
 - [ ] Study [FAO Open Foris Whisp](https://openforis.org/solutions/whisp/): how does it decide deforestation risk?
 
-## Week 13: Build `forestcheck` (Prove it)
+## Part 4: Build `forestcheck` (Prove it)
 
 As a module in Asase GIS or a standalone repo. For each plot polygon:
 

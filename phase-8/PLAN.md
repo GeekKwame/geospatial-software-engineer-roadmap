@@ -1,10 +1,10 @@
-# Phase 8 plan: Production, scale and cloud-native (Weeks 21–23)
+# Phase 8 plan: Production, scale and cloud-native
 
 **Goal:** Use your DevOps and AWS strengths in a geospatial setting. This is where you can pull ahead of most GIS developers.
 
 **Main resource (⭐):** [Cloud-Native Geospatial Guide](https://guide.cloudnativegeo.org/)
 
-## Week 21: Containers, background jobs and testing
+## Part 1: Containers, background jobs and testing
 
 - [ ] Docker images with GDAL that actually work:
   - Start from the [official GDAL images](https://github.com/OSGeo/gdal/tree/master/docker)
@@ -18,7 +18,7 @@
   - [ ] [pytest-django](https://pytest-django.readthedocs.io/) against a real PostGIS database
 - [ ] Safe migrations that alter geometry columns; PostGIS backup and restore
 
-## Week 22: Cloud-native data and analytics
+## Part 2: Cloud-native data and analytics
 
 - [ ] **COGs on S3** + CloudFront for rasters ([cogeo.org](https://cogeo.org/))
 - [ ] **PMTiles on S3** for vector tiles without a tile server
@@ -29,7 +29,7 @@
 - [ ] Observability: log slow spatial queries, track tile cache hit rates
 - [ ] Licensing and attribution: OSM (ODbL), Copernicus, Hansen (CC-BY); data protection for farmer data
 
-## Week 23: Deploy (Prove it)
+## Part 3: Deploy (Prove it)
 
 - [ ] Deploy Asase GIS to AWS with Terraform:
   - [ ] PostGIS on RDS

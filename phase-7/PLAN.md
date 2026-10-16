@@ -1,10 +1,10 @@
-# Phase 7 plan: Modern web mapping (Weeks 19–20)
+# Phase 7 plan: Modern web mapping
 
 **Goal:** Build map interfaces that field officers and managers actually want to use, and that can display 100k+ plots smoothly.
 
 **Main resource (⭐):** [MapLibre GL JS examples](https://maplibre.org/maplibre-gl-js/docs/examples/) (work through 20+) and the [MapLibre style spec](https://maplibre.org/maplibre-style-spec/)
 
-## Week 19: MapLibre, drawing and Turf
+## Part 1: MapLibre, drawing and Turf
 
 - [ ] **MapLibre GL JS:**
   - [ ] Sources and layers, and how a style is put together
@@ -17,7 +17,7 @@
 - [ ] Look at [deck.gl](https://deck.gl/) and [kepler.gl](https://kepler.gl/) for big-data visualisation
 - [ ] Map UX: clustering, legends, filters, mobile layouts, and slow 3G connections in rural Ghana
 
-## Week 20: React + MapLibre frontend for Asase GIS (Prove it)
+## Part 2: React + MapLibre frontend for Asase GIS (Prove it)
 
 - [ ] A vector-tile layer of all plots, coloured by EUDR risk from Phase 4
 - [ ] Click a plot → side panel with its attributes, NDVI chart and conflicts

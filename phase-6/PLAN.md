@@ -1,10 +1,10 @@
-# Phase 6 plan: Geospatial backends and standards (Weeks 16–18)
+# Phase 6 plan: Geospatial backends and standards
 
 **Goal:** Serve spatial data the way professional systems do: fast vector tiles, standard OGC APIs, and dynamic raster tiles.
 
 **Main resource (⭐):** [pygeoapi workshop, "Diving into pygeoapi"](https://dive.pygeoapi.io/)
 
-## Week 16: GeoDjango and DRF-GIS in depth
+## Part 1: GeoDjango and DRF-GIS in depth
 
 - [ ] GeoDjango: `GEOSGeometry`, spatial lookups (`intersects`, `dwithin`, `contains`), `Transform`, `Area`, GIS admin widgets
 - [ ] Write custom `Func` wrappers for `ST_*` functions GeoDjango doesn't expose
@@ -12,7 +12,7 @@
 - [ ] Try the FastAPI + GeoAlchemy2 alternative for one small endpoint
 - [ ] Watch: [Maps with GeoDjango, PostGIS and Leaflet](https://djangotv.com/videos/djangocon-europe/2019/djangocon-2019-maps-with-geodjango-postgis-and-leaflet/)
 
-## Week 17: OGC standards and vector tiles
+## Part 2: OGC standards and vector tiles
 
 - [ ] **OGC standards:** what WMS and WFS are (legacy but everywhere), and **OGC API – Features** (the modern REST version)
 - [ ] Work through the pygeoapi workshop
@@ -24,7 +24,7 @@
 - [ ] Watch: [How to visualise millions of features](https://www.youtube.com/watch?v=ifkl30N-_-w)
 - [ ] GeoServer basics ([getting started](https://docs.geoserver.org/latest/en/user/gettingstarted/index.html)), because many government and NGO partners use it
 
-## Week 18: Add to Asase GIS (Prove it)
+## Part 3: Add to Asase GIS (Prove it)
 
 - [ ] Martin (or a Django `ST_AsMVT` view) serving your 100k plots as vector tiles
 - [ ] An OGC API – Features endpoint via pygeoapi, pointing at the same PostGIS database

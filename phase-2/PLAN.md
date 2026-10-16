@@ -1,4 +1,4 @@
-# Phase 2 plan: Geospatial Python (Weeks 4–6)
+# Phase 2 plan: Geospatial Python
 
 **Goal:** Do everything you did in QGIS, but in reproducible, testable Python.
 
@@ -7,7 +7,7 @@
 
 **Prove-it project:** `plotcheck`, an EUDR plot-validator command-line tool and Python package, in its own GitHub repo.
 
-## Week 4: GeoPandas and the GDAL command line
+## Part 1: GeoPandas and the GDAL command line
 
 - [ ] Work through the Spatial Thoughts Python course
 - [ ] Redo your Phase 1 QGIS work in a Jupyter notebook, using the same Ghana data:
@@ -19,7 +19,7 @@
   - [ ] `ogr2ogr` to convert formats (Shapefile → GeoPackage → GeoJSON), reproject (`-t_srs EPSG:32630`) and filter (`-where`, `-sql`)
   - [ ] `gdalinfo` on a raster
 
-## Week 5: Shapely 2, pyproj and messy data
+## Part 2: Shapely 2, pyproj and messy data
 
 - [ ] **Shapely 2:**
   - [ ] Validity: `is_valid`, `is_valid_reason`, `make_valid`, `set_precision`
@@ -30,7 +30,7 @@
   - [ ] Geodesic area with `Geod(ellps="WGS84").geometry_area_perimeter(...)`
 - [ ] Practise on messy inputs: KML exported from a phone, a CSV of GPS points, mixed CRS, duplicate vertices, 3D (Z) coordinates
 
-## Week 6: Build `plotcheck` (Prove it)
+## Part 3: Build `plotcheck` (Prove it)
 
 Create a new repo (for example `plotcheck`) with a package layout, a CLI (`typer` or `click`), and pytest tests.
 

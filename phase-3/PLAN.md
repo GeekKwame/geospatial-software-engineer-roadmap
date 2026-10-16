@@ -1,4 +1,4 @@
-# Phase 3 plan: Advanced PostGIS (Weeks 7–9)
+# Phase 3 plan: Advanced PostGIS
 
 **Goal:** Move from "PostGIS stores my polygons" to "I can design, query, index and tune a spatial database of a million farm plots".
 
@@ -12,7 +12,7 @@ docker compose up -d
 docker compose exec postgis psql -U geo -d gis
 ```
 
-## Week 7: Core PostGIS
+## Part 1: Core PostGIS
 
 - [ ] PostGIS workshop: loading data, geometries, spatial relationships, spatial joins
 - [ ] Load your Phase 1 Ghana data with `ogr2ogr`:
@@ -26,7 +26,7 @@ docker compose exec postgis psql -U geo -d gis
 - [ ] Typed columns: `geometry(MultiPolygon, 4326)`, and SRIDs
 - [ ] Validity: `ST_IsValid`, `ST_IsValidReason`, `ST_MakeValid`, `ST_SnapToGrid`, `ST_ReducePrecision`
 
-## Week 8: Indexes and performance
+## Part 2: Indexes and performance
 
 - [ ] **GiST indexes:** `CREATE INDEX ... USING GIST (geom);`
 - [ ] Read query plans with `EXPLAIN ANALYZE`
@@ -37,7 +37,7 @@ docker compose exec postgis psql -U geo -d gis
 - [ ] Overlap detection: self-join plots on `ST_Intersects`, then measure `ST_Area(ST_Intersection(...)::geography)`
 - [ ] Optional: pgRouting, PostGIS raster, topology
 
-## Week 9: Add to Asase GIS (Prove it)
+## Part 3: Add to Asase GIS (Prove it)
 
 - [ ] A `ForestReserve` / `ProtectedArea` model (synthetic shapes, or open protected-area data if the licence allows)
 - [ ] Endpoint `/api/plots/{id}/conflicts/`: overlapping plots and reserve intersections, with overlap area in hectares

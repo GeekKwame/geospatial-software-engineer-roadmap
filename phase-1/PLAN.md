@@ -1,4 +1,4 @@
-# Phase 1 plan: GIS and geodesy foundations (Weeks 1–3)
+# Phase 1 plan: GIS and geodesy foundations
 
 **Goal:** Think like a GIS analyst. Most GIS bugs in software come from misunderstood basics: the wrong coordinate system, swapped latitude and longitude, invalid geometry, or area measured in degrees.
 
@@ -14,7 +14,7 @@ phase-1/
 └── ghana-cocoa-belt.qgz    ← your QGIS project (save it here)
 ```
 
-## Week 1: QGIS basics and data
+## Part 1: QGIS basics and data
 
 - [ ] Work through the first modules of the Spatial Thoughts QGIS course
 - [ ] Download into `phase-1/data/`:
@@ -26,7 +26,7 @@ phase-1/
   - [ ] Selecting features by attribute and by location
 - [ ] Learn the difference between vector data (points, lines, polygons) and raster data (grids of pixels)
 
-## Week 2: Coordinate systems and geometry
+## Part 2: Coordinate systems and geometry
 
 - [ ] Learn the difference between a **datum**, a **projection** and a **CRS** (coordinate reference system), and what an EPSG code is
   - Optional maths: [Snyder, *Map Projections: A Working Manual*](https://pubs.usgs.gov/publication/pp1395), chapters 1–8
@@ -39,7 +39,7 @@ phase-1/
 - [ ] Learn what makes a geometry invalid: self-intersections ("figure-eights"), unclosed rings, overlaps, gaps, slivers
 - [ ] Learn the file formats: GeoJSON (longitude before latitude), Shapefile and its limits, GeoPackage (the modern default), KML, GeoTIFF
 
-## Week 3: Build the "Ghana Cocoa Belt" project (Prove it)
+## Part 3: Build the "Ghana Cocoa Belt" project (Prove it)
 
 - [ ] Add regions, districts, OSM roads and settlements
 - [ ] Add forest-loss data from [Global Forest Watch](https://www.globalforestwatch.org/) for the Western, Ashanti or Eastern region
