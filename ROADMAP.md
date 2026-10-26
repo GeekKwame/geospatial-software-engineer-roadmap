@@ -124,23 +124,31 @@ Read these first (about 1 hour):
 
 ### Learn
 
-- [ ] Vector vs raster data, layers, attributes, symbology
+- [ ] QGIS's mental model: project vs layer vs data source; Browser, Layers, Styling and Processing panels; layer order and on-the-fly reprojection
+- [ ] Inspect unfamiliar data before using it: geometry type, feature count, extent, CRS/units, attributes, missing values, provenance, date and licence
+- [ ] Vector vs raster data; points, lines and polygons; layers, attributes and symbology
+- [ ] Attribute and spatial selection; joins with stable IDs instead of fragile place names
 - [ ] **Datum vs projection vs CRS**; geographic vs projected coordinates; what an EPSG code is
 - [ ] **Ghana's coordinate systems:**
   - [EPSG:4326 (WGS 84)](https://epsg.io/4326): GPS and GeoJSON
   - [EPSG:32630 (UTM 30N)](https://epsg.io/32630): metric work in most of Ghana
-  - [EPSG:2136 (Accra / Ghana National Grid)](https://epsg.io/2136) and [EPSG:25000 (Leigon / Ghana Metre Grid)](https://epsg.io/25000): the legacy systems used on older Ghana survey and forest-reserve maps
-- [ ] Why area and distance need a projected CRS or geodesic maths. (Ghana sits across UTM 30N and 31N, so know when that matters.)
-- [ ] Geometry validity: rings, orientation, self-intersections, slivers, gaps, overlaps
+  - [EPSG:32631 (UTM 31N)](https://epsg.io/32631): metric work in far-eastern Ghana
+  - [EPSG:2136 (Accra / Ghana National Grid)](https://epsg.io/2136) and [EPSG:25000 (Leigon / Ghana Metre Grid)](https://epsg.io/25000): legacy systems used on older Ghana survey and forest-reserve maps
+- [ ] Why area and distance need a projected CRS or geodesic maths; compare the same farm in EPSG:4326, UTM 30N and UTM 31N
+- [ ] **Assigning a CRS vs reprojecting coordinates**, plus the latitude/longitude order trap
+- [ ] Geometry validity vs data quality: self-intersections and collapsed parts; slivers, gaps, overlaps and duplicates; snapping and topological editing
 - [ ] File formats: GeoJSON ([RFC 7946](https://datatracker.ietf.org/doc/html/rfc7946), longitude before latitude), Shapefile and its limits, **GeoPackage** (the modern default), KML, GeoTIFF
-- [ ] Spatial analysis basics: buffer, clip, intersect, dissolve, spatial join, zonal statistics
-- [ ] Cartography: map layouts, legends, scale, choropleths
+- [ ] Spatial analysis basics: buffer, clip, intersect, dissolve and spatial join; predict and verify output geometry, attributes and feature counts
+- [ ] Reproducibility: unchanged raw data, derived layers in a GeoPackage, relative paths, a source manifest and one saved processing workflow
+- [ ] Cartography: classification, labels, scale-dependent styling, layouts, legends, scale bars, sources and CRS
+- [ ] Basemap reality: Web Mercator display is not an analysis CRS; remote tiles need attribution and are not embedded in the QGIS project
 
 
 
 ### Resources
 
 - ⭐ **Spatial Thoughts: Introduction to QGIS (free full course, data, and video):** [courses.spatialthoughts.com/introduction-to-qgis.html](https://courses.spatialthoughts.com/introduction-to-qgis.html)
+- 🧪 **Ghana-focused companion lab:** [Ernest Opoku-Kwarteng's Geospatial Developers Module 1](https://github.com/ernest19/Geospatial_Developers/tree/main/module_1) for layer loading/order, GeoPackage, cartography, basemaps, optional georeferencing and a qgis2web preview. Use it for practice, not as another course to complete.
 - 📖 [QGIS Training Manual (official)](https://docs.qgis.org/latest/en/docs/training_manual/) and the [QGIS User Manual](https://docs.qgis.org/latest/en/docs/user_manual/)
 - 📖 [QGIS Tutorials and Tips by Ujaval Gandhi](https://www.qgistutorials.com/en/)
 - 📖 [USGS: *Map Projections: A Working Manual* (Snyder), free PDF](https://pubs.usgs.gov/publication/pp1395). Your maths degree makes this readable; do chapters 1–8.
@@ -157,17 +165,21 @@ Read these first (about 1 hour):
 - [Geofabrik: OpenStreetMap extract for Ghana](https://download.geofabrik.de/africa/ghana.html)
 - [Google Open Buildings](https://sites.research.google/open-buildings/) (covers Ghana)
 - [Global Forest Watch](https://www.globalforestwatch.org/): browse tree-cover loss in the Western, Ashanti and Eastern cocoa belts
+- [Ernest's Ghana course data](https://github.com/ernest19/Geospatial_Developers/tree/main/datasets): convenient for interface exercises; check age, authority and licence before using it in the final project
 
 
 
 ### 🎯 Prove it
 
-**"Ghana Cocoa Belt" QGIS project.** It should contain regions and districts, OSM roads and settlements, forest-loss tiles from GFW, and about 20 hand-digitised synthetic "farm" polygons. Then:
+**"Ghana Cocoa Belt" QGIS project.** Pick a study area and map question. Include regions/districts, OSM roads/settlements, introductory forest-loss data and about 20 synthetic farm polygons. Then:
 
-1. Reproject everything to UTM 30N and calculate areas.
-2. Deliberately create 3 invalid polygons and fix them with *Check Validity* / *Fix Geometries*.
-3. Export a print layout to PDF.
-4. Write `notes/01-crs-cheatsheet.md`: which CRS to use for what in Ghana, and why.
+1. Keep source downloads unchanged, record their provenance/licences in `phase-1/SOURCES.md` and package processed vector layers in a GeoPackage.
+2. Choose the appropriate UTM zone, calculate hectares, spatially join farms to districts and explain the CRS decision.
+3. Deliberately create a self-intersection, an overlap/sliver and a wrong-CRS or swapped-coordinate failure; diagnose each before repairing it.
+4. Export a credited print layout to PDF and PNG, and reopen the `.qgz` to prove its relative paths work.
+5. Write a small project README plus `notes/01-crs-cheatsheet.md` covering storage, web exchange, display and measurement.
+
+Optional: georeference one public scanned map and inspect its residual error, **or** export a small qgis2web preview. Production remote sensing and web mapping remain in Phases 4 and 7.
 
 ---
 
