@@ -8,6 +8,25 @@
 
 **Prove-it project:** a reproducible **Ghana Cocoa Belt** QGIS project, a print map and a short CRS decision guide.
 
+## Course progress
+
+You do not need to complete every lesson in the main course before building the Phase 1 project. The checked items below were completed in the Earthquakes and NYC population-density exercises.
+
+- [x] Configuration and setup: enable toolbars and install plugins
+- [x] 1.1 Importing Vector Data and challenge
+- [x] 1.2 Symbology and challenge
+- [x] 1.3 Labelling and challenge
+- [x] 1.4 Print Layout and challenge
+- [x] Concept: Joins
+- [x] 2.1 Table Join and challenge
+- [ ] **Use when styling the Ghana map:** Concept: Data Normalization and 2.2 Creating a Choropleth Map
+- [x] **Used while creating the synthetic farms:** 4.1 Attribute Forms and 4.2 Digitizing Polygons
+- [x] **Used while preparing the project data:** 5.1 Download OpenStreetMap Data and 5.2 Reproject and Buffer
+- [ ] **Optional now:** section 3, Georeferencing; useful for legacy maps, but not required for the Phase 1 project
+- [ ] **Optional now:** 5.3 Calculate Zonal Statistics; raster analysis returns in Phase 4
+
+You can stop following the course sequentially here and build the Ghana Cocoa Belt project below. Use sections 2.2, 4 and 5 as just-in-time instructions while building, and return to the optional lessons when a real task needs them.
+
 ## Folder layout
 
 ```text
@@ -25,7 +44,6 @@ Keep source data unchanged in `data/raw/`. Export derived layers to `data/proces
 
 ## Part 1: Become comfortable in QGIS
 
-- [ ] Work through the first modules of the Spatial Thoughts QGIS course
 - [ ] Learn the QGIS mental model:
   - [ ] **Project** (`.qgz`) vs **layer** vs **data source**; saving a project does not copy its data
   - [ ] Browser, Layers, Layer Styling and Processing Toolbox panels
@@ -43,10 +61,10 @@ Keep source data unchanged in `data/raw/`. Export derived layers to `data/proces
 ### Practice data
 
 - [ ] Download into `phase-1/data/raw/`:
-  - [ ] [Ghana administrative boundaries from HDX](https://data.humdata.org/dataset/cod-ab-gha) (regions and districts)
-  - [ ] [Geofabrik Ghana extract](https://download.geofabrik.de/africa/ghana.html) (roads and settlements)
+  - [x] [Ghana administrative boundaries from HDX](https://data.humdata.org/dataset/cod-ab-gha) (regions and districts)
+  - [x] [Geofabrik Ghana extract](https://download.geofabrik.de/africa/ghana.html) (roads and settlements)
 - [ ] Optional: use the Ghana districts, regions, health facilities, railways and population files in [Ernest's course dataset](https://github.com/ernest19/Geospatial_Developers/tree/main/datasets) for the interface exercises
-- [ ] Create `phase-1/SOURCES.md` with, for each final-project dataset: source URL, download date, licence, original CRS and what you use it for
+- [x] Create `phase-1/SOURCES.md` with, for each final-project dataset: source URL, download date, licence, original CRS and what you use it for
 
 > Training datasets can become stale. Ernest's dataset is convenient for exercises; use a current, authoritative or well-maintained source for the final map and verify its licence before republishing it.
 
@@ -59,7 +77,7 @@ Keep source data unchanged in `data/raw/`. Export derived layers to `data/proces
   - [ ] **GeoJSON:** good for web interchange; WGS 84 and longitude before latitude under RFC 7946
   - [ ] **KML:** common field/GPS interchange, but not a strong analysis format
   - [ ] **GeoTIFF:** georeferenced raster data
-- [ ] Package the final vector layers into `data/processed/ghana-cocoa-belt.gpkg` with clear lowercase names
+- [x] Package the final vector layers into `data/processed/ghana-cocoa-belt.gpkg` with clear lowercase names
 - [ ] Learn the difference between a **temporary/scratch layer** and a saved layer so work is not lost when QGIS closes
 
 ## Part 3: Coordinate systems and measurement
@@ -96,27 +114,27 @@ Keep source data unchanged in `data/raw/`. Export derived layers to `data/proces
 
 ## Part 5: Cartography and communication
 
-- [ ] Style regions or districts with an appropriate categorised or graduated renderer; explain why the classification and colour scheme fit the data
-- [ ] Label without making the map unreadable; set scale-dependent visibility where useful
-- [ ] Add an OSM basemap through QGIS XYZ Tiles or QuickMapServices and note:
-  - [ ] the basemap is normally served in EPSG:3857, but that does not make it suitable for measuring area
-  - [ ] tiles are an external service, not part of the saved project
-  - [ ] the provider's licence, attribution and usage policy still apply
-- [ ] Create a print layout with title, legend, scale bar, north arrow, data sources, author, date and CRS
-- [ ] Check the layout at its exported size, not only while zoomed in inside QGIS
+- [x] Style the final context layers and categorical annual forest-loss raster with a restrained, readable colour scheme
+- [x] Label districts and towns while filtering the displayed OSM features for readability
+- [x] Add an OSM basemap through QGIS XYZ Tiles or QuickMapServices and note:
+  - [x] the basemap is normally served in EPSG:3857, but that does not make it suitable for measuring area
+  - [x] tiles are an external service, not part of the saved project
+  - [x] the provider's licence, attribution and usage policy still apply
+- [x] Create a print layout with title, legend, scale bar, north arrow, data sources, author, date and CRS
+- [x] Check the layout at its exported size, not only while zoomed in inside QGIS
 
 ## Part 6: Build the "Ghana Cocoa Belt" project (Prove it)
 
-- [ ] Pick one study area in Ghana's cocoa belt and write a one-sentence map question
-- [ ] Add regions, districts, OSM roads and settlements
-- [ ] Add forest-loss data from [Global Forest Watch](https://www.globalforestwatch.org/) for the study area; treat it as an introduction to raster/thematic data, not a deforestation verdict (that comes in Phase 4)
-- [ ] Draw about 20 made-up farm polygons (synthetic, never real farmer data) with `plot_id`, `crop`, `survey_date`, `area_ha` and `source` fields
-- [ ] Reproject the analysis layers to the appropriate UTM zone and calculate each farm's area in hectares (`$area / 10000` in the field calculator)
-- [ ] Run validity and overlap checks and resolve or document every warning
-- [ ] Use a spatial join to attach the containing district to each synthetic farm
-- [ ] Export a print layout to `phase-1/exports/ghana-cocoa-belt.pdf` and a PNG preview
-- [ ] Write `notes/01-crs-cheatsheet.md`: which CRS to use for storage, web exchange, display and measurement in Ghana, and why
-- [ ] Write a short `phase-1/README.md` with the map question, workflow, data sources, CRS decisions, limitations and a screenshot
+- [x] Pick one study area in Ghana's cocoa belt and write a one-sentence map question
+- [x] Add regions, districts, OSM roads and settlements
+- [x] Add forest-loss data from the Hansen/Global Forest Change source used by Global Forest Watch for the study area; treat it as an introduction to raster/thematic data, not a deforestation verdict (that comes in Phase 4)
+- [x] Draw about 20 made-up farm polygons (synthetic, never real farmer data) with `plot_id`, `crop`, `survey_date`, `area_ha` and `source` fields
+- [x] Reproject the analysis layers to the appropriate UTM zone and calculate each farm's area in hectares (`$area / 10000` in the field calculator)
+- [x] Run validity and overlap checks and resolve or document every warning
+- [x] Use a spatial join to attach the containing district to each synthetic farm
+- [x] Export a print layout to `phase-1/exports/ghana-cocoa-belt.pdf` and a PNG preview
+- [x] Write `notes/01-crs-cheatsheet.md`: which CRS to use for storage, web exchange, display and measurement in Ghana, and why
+- [x] Write a short `phase-1/README.md` with the map question, workflow, data sources, CRS decisions, limitations and a screenshot
 
 ### Optional stretch exercises from Ernest's course
 
@@ -138,5 +156,5 @@ Choose at most one now; neither is required to finish Phase 1.
 - [ ] You can inspect an unfamiliar layer and identify its geometry, CRS, extent, attributes, provenance and likely problems
 - [ ] You can explain why measuring area in EPSG:4326 is wrong and choose an appropriate measurement method for a Ghanaian plot
 - [ ] You can diagnose a missing/misplaced layer, invalid polygon and bad join without blindly clicking repair tools
-- [ ] The `.qgz` reopens without broken layers on a clean path
-- [ ] The QGIS project, GeoPackage, PDF/PNG map, `phase-1/SOURCES.md`, project README and CRS cheat sheet all exist
+- [x] The `.qgz` reopens without broken layers on a clean path
+- [x] The QGIS project, GeoPackage, PDF/PNG map, `phase-1/SOURCES.md`, project README and CRS cheat sheet all exist
